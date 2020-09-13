@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>77638c3c-ac6a-4913-a8e1-15ab71c4fff5</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>No5.py</StartupFile>
+    <StartupFile>No4_test.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -35,6 +35,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="No4.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="No4_test.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="No5.py">
