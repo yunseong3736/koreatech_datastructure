@@ -89,7 +89,7 @@ class Polynomial :
     def easyread(self):
         deg = input("다항식의 각 차수를 입력하시오 : ")
         for i in deg.split():
-            self.coef.append(int(i))
+            self.coef.append(float(i))
 
 a = Polynomial()
 b = Polynomial()
