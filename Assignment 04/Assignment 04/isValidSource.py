@@ -15,17 +15,17 @@ def isValidSource(lines) :
                 and line[ch] == '/' and line[ch+1] == '/' : break
 
             # /* */ : 여러 줄 주석인 경우
-            if (line[ch] == '/' and line[ch+1] == '*') or \
-               (line[ch] == '*' and line[ch+1] == '/'): ischl = not ischl
+            if (line[ch] == '/' and line[ch+1] == '*' ) or \
+               (line[ch] == '*' and line[ch+1] == '/' ): ischl = not ischl
             if ischl : continue
 
-            # ""안에 없는 ' 인 경우
-            if line[ch] == '\'' and not isch2:
+            # ""안에 없는 ' 인 경우 그리고 이스케이프 문자 무시
+            if line[ch] == '\'' and not isch2 and line[ch-1] != '\\':
                 isch = not isch
             if isch : continue
 
-            # ''안에 없는 " 인 경우
-            if line[ch] == '\"' and not isch:
+            # ''안에 없는 " 인 경우 그리고 이스케이프 문자 무시
+            if line[ch] == '\"' and not isch and line[ch-1] != '\\':
                 isch2 = not isch2
             if isch2 : continue
 
